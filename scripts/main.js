@@ -71,6 +71,7 @@ const table1 = tables[0];
 table1.setAttribute("class", "table1");
 table1.setAttribute("style", "width: 60%;");
 
+// Hieman kesken
 const secondUl = document.querySelectorAll(".second-ul");
 secondUl.forEach((element) => {
   element.setAttribute(
