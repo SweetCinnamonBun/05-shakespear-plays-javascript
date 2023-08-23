@@ -1,49 +1,26 @@
-// let myStyle = document.createElement("style");
-
-// myStyle.innerHTML = `
-
-// section > ul {
-//     display: flex;
-//   }
-
-//   section > ul > li {
-//     list-style: none;
-//   }
-
-//   section > ul > li > ul {
-//     background-color: gray;
-//     margin-right: 1.5rem;
-//     margin-top: 1rem;
-//   }
-
-//   section > ul > li > ul > li > a {
-//     font-style: italic;
-//     text-decoration: underline dotted 0.27rem red;
-//     color: brown;
-//   }
-
-//   tr:nth-child(even) {
-//     background-color: gray;
-//   }
-
-//   td,
-//   th {
-//     padding: 1.2rem 1.5rem;
-//   }
-// `;
-
-// document.head.appendChild(myStyle);
-
 const eka = document.getElementById("eka");
 const uls = eka.querySelector("ul");
 const firstUl = uls;
 firstUl.setAttribute("style", "display:flex;");
 
 const firstLi = firstUl.children;
+console.log(firstLi);
 
 for (let index = 0; index < firstLi.length; index++) {
   firstLi[index].setAttribute("class", "firstli");
   firstLi[index].setAttribute("style", "list-style: none;");
+}
+
+for (let index = 0; index < firstLi.length; index++) {
+  let secondUl = firstLi[index].children;
+  console.log(secondUl);
+  for (let index = 0; index < secondUl.length; index++) {
+    secondUl[index].setAttribute(
+      "style",
+      " background-color: gray;    margin-right: 1.5rem; margin-top: 1rem;"
+    );
+    secondUl[index].setAttribute("class", "second-ul");
+  }
 }
 
 let x = document.getElementsByClassName("firstli");
@@ -72,13 +49,13 @@ table1.setAttribute("class", "table1");
 table1.setAttribute("style", "width: 60%;");
 
 // Hieman kesken
-const secondUl = document.querySelectorAll(".second-ul");
-secondUl.forEach((element) => {
-  element.setAttribute(
-    "style",
-    " background-color: gray;    margin-right: 1.5rem; margin-top: 1rem;"
-  );
-});
+// const secondUl = document.querySelectorAll(".second-ul");
+// secondUl.forEach((element) => {
+//   element.setAttribute(
+//     "style",
+//     " background-color: gray;    margin-right: 1.5rem; margin-top: 1rem;"
+//   );
+// });
 
 const trArray1 = table1.querySelectorAll("tr");
 
