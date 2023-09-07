@@ -13,7 +13,6 @@ for (let index = 0; index < firstLi.length; index++) {
 
 for (let index = 0; index < firstLi.length; index++) {
   let secondUl = firstLi[index].children;
-  console.log(secondUl);
   for (let index = 0; index < secondUl.length; index++) {
     secondUl[index].setAttribute(
       "style",
@@ -41,21 +40,13 @@ const toka = document.getElementById("toka");
 
 toka.setAttribute("style", "margin: 0 0 4rem 0");
 
+// Table 1 section
 const tables = document.querySelectorAll("table");
 
 const table1 = tables[0];
 
 table1.setAttribute("class", "table1");
 table1.setAttribute("style", "width: 60%;");
-
-// Hieman kesken
-// const secondUl = document.querySelectorAll(".second-ul");
-// secondUl.forEach((element) => {
-//   element.setAttribute(
-//     "style",
-//     " background-color: gray;    margin-right: 1.5rem; margin-top: 1rem;"
-//   );
-// });
 
 const trArray1 = table1.querySelectorAll("tr");
 
@@ -72,9 +63,10 @@ td.forEach((element) => {
 
 const th = document.querySelectorAll("th");
 th.forEach((element) => {
-  element.setAttribute("style", "padding: 1.2rem 1.4rem;");
+  element.setAttribute("style", "padding: 1.2rem 1.4rem; text-align:start;");
 });
 
+// table 2 section
 const table2 = tables[1];
 table2.setAttribute("class", "table2");
 table2.setAttribute("style", "width: 30%;");
@@ -87,6 +79,7 @@ for (let index = 0; index < trArray2.length; index++) {
   }
 }
 
+// Links section
 var links = document.links;
 for (let index = 0; index < links.length; index++) {
   var href = links[index].href;
